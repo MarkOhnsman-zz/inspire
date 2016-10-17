@@ -6,7 +6,7 @@ function ImageService() {
 	// var image = ``
 
    	iService.getImage = function (callWhenDone) {
-		return $.get(url2, function (res) { //will need apiUrl when pushed to GitHub
+		return $.get(apiUrl, function (res) {
 			callWhenDone(res.url)
         })
     }
