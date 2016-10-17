@@ -3,11 +3,11 @@ function ImageService() {
 	var url = 'https://bcw-getter.herokuapp.com/?url=';
 	var url2 = 'http://www.splashbase.co/api/v1/images/random'
 	var apiUrl = url + encodeURIComponent(url2);
-	// var image = ``
 
    	iService.getImage = function (callWhenDone) {
 		return $.get(apiUrl, function (res) {
-			callWhenDone(res.url)
+			var image = JSON.parse(res)
+			callWhenDone(image.url)
         })
     }
 };

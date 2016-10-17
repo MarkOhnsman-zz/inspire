@@ -13,6 +13,7 @@ function WeatherService(){
         }
         $.get(apiUrl, function(res){
             localStorage.setItem('weather', JSON.stringify(res))
+            console.log
 			var far = ((res.main.temp - 273.15)* 1.8000) + 32.00
             callWhenDone(far);
         })
