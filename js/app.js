@@ -26,11 +26,9 @@ function inspireController(){
     tempElem.html(`<h6>${far.toFixed(2)}°F</h6>`)
     }
 
-$('#content').on('click', 'button.newload', function(){
     iService.getImage(updateImage)
     qService.getQuote(updateQuote)
     wService.getWeather(updateTemp)
-})
 
 
  

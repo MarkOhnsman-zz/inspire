@@ -14,4 +14,4 @@ function TodoService(){
 		localStorage.setItem('todo', JSON.stringify(todos));
 		console.log('Todo Data Saved:', todos);
 	}
-} 
+}  
