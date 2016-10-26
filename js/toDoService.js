@@ -1,6 +1,6 @@
 function TodoService(){
 	this.getTodos =  function(){
-		var t = localStorage.getItem('todo');
+		var t = localStorage.getItem('inspireTodo');
 		if(t){
 			console.log('Todo Data:', JSON.parse(t))
 			return JSON.parse(t)
@@ -11,7 +11,7 @@ function TodoService(){
 	
 	this.saveTodos =  function(todos){
 				//^^^ Less typical but todos should always be the entire array
-		localStorage.setItem('todo', JSON.stringify(todos));
+		localStorage.setItem('inspireTodo', JSON.stringify(todos));
 		console.log('Todo Data Saved:', todos);
 	}
-}  
+}

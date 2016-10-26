@@ -6,7 +6,7 @@ function QuoteService(){
 	this.getQuote =  function(callWhenDone){
 		return $.get(apiUrl, function(res){
 			var obj = JSON.parse(res)
-			var fullQuote= obj.quote + " - " + obj.author
+			var fullQuote= `<em>"` + obj.quote +`"</em>` + " - " + obj.author
 			callWhenDone(fullQuote)
 		})
 	}
